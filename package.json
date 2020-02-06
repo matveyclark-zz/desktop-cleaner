@@ -1,0 +1,19 @@
+{
+  "name": "desktop-cleaner",
+  "version": "1.0.0",
+  "description": "Simple automation tool to help de-clutter your desktop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matveyclark/desktop-cleaner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matveyclark/desktop-cleaner/issues"
+  },
+  "homepage": "https://github.com/matveyclark/desktop-cleaner#readme"
+}
