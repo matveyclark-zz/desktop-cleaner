@@ -11,12 +11,18 @@ fs.mkdir(`${desktop}/cleanup`, () => {
     // get all files located in the desktop
     fs.readdir(desktop, (error, files) => {
         files.forEach(file => {
-            // check if the extension of each file is an image
-            path.extname(`${desktop}/${file}`) === '.png'
-            // create an image folder 
-            && fs.mkdir(`${desktop}/cleanup/images`, () => {
+            // check if the extension of each file is an image and create am image folder
+            if(path.extname(`${desktop}/${file}`) === '.png') {
+                fs.mkdir(`${desktop}/cleanup/images`, () => {
                 console.log(`Created an image folder. 📸`)
-            })
+                    // add the images to the newly created folder
+                    let oldPath = `${desktop}/${file}`
+                    let newPath = `${desktop}/cleanup/images`
+                    fs.rename(oldPath, newPath, () => {
+                        console.log('Files successfully moved.')
+                    })
+                })
+            }
         })
     })
 })
